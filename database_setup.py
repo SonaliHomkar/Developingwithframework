@@ -7,6 +7,16 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 
+# code added on 12 Sept
+class User(Base):
+    __tablename__ = 'user'
+    
+    name = Column(String(250),nullable=False)
+    id = Column(Integer,primary_key=True)
+    email =  Column(String(250))
+    picture = Column(String(250))
+# end code added on 12 Sept
+
 class Restaurant(Base):
     __tablename__='restaurant'
 
